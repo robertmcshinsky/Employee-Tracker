@@ -1,9 +1,32 @@
-  const express = require("express");
-  const inquirer = require("inquirer");
-  const PORT = 3000;
-  const app = express();
+const express = require("express");
+const inquirer = require("inquirer");
+const cTable = require("console.table");
+const mysql2 = require("mysql2");
+const PORT = 3000;
+const app = express();
+const script = require("./assets/js/script.js");
 
-  /////////////////////
-  app.listen(PORT, () => {
-    console.log("Listening on Port", PORT);
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+//const options = require("./assets/options.json");
+
+//console.log(options);
+
+////////////////////////////////
+app.get("/", (req, res) => {
+  res.json({
+    message: "Hello World",
   });
+});
+
+app.use(express.static("assets"));
+
+////////////////////////////////
+// Default response for any other request (Not Found)
+app.use((req, res) => {
+  res.status(404).end();
+});
+////////////////////////////////
+app.listen(PORT, () => {
+  console.log("Listening on Port", PORT);
+});

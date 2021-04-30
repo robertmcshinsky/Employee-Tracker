@@ -1,0 +1,22 @@
+{
+  "options": [
+{
+  "type": "list",
+  "name": "All",
+  "message": "Here are all the options.",
+  "choices": [
+    "View all Departments",
+    "View all Roles",
+    "View all Employees",
+    "Add Department",
+    "Add Employee",
+    "Update Employee",
+    "Remove Employee",
+    "Update Employee Role",
+    "Update Employee Manager",
+    "Add Role",
+    "Remove Role"
+  ],
+  "default": ""
+}]
+}

@@ -1,0 +1,10 @@
+{
+  "departments": [
+{
+  "type": "list",
+  "name": "All",
+  "message": "Here are all the options.",
+  "choices": [],
+  "default": ""
+}]
+}
