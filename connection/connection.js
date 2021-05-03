@@ -1,4 +1,6 @@
-const connection = mysql.createConnection({
+const mysql = require("mysql2");
+
+const db = mysql.createConnection({
   host: "localhost",
   // Your username
   user: "root",
@@ -6,12 +8,16 @@ const connection = mysql.createConnection({
   password: "HOTdog123456",
   database: "employees_db",
 });
-connection.connect(function (err) {
+
+db.connect(function (err) {
   if (err) {
     console.log(err);
     return;
   }
 });
+
 // Setting up connection.query to use promises instead of callbacks
 // This allows us to use the async/await syntax
-module.exports = connection;
+exports.db = function () {
+  return db;
+};

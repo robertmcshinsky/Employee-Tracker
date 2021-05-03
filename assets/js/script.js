@@ -4,8 +4,14 @@ const mysql2 = require("mysql2");
 const cTable = require("console.table");
 
 const options = require("../data/options.json");
+const employees = require("../data/employees.json");
 const option = options.options[0];
+////////////////////////////////////////////////////////////////
+// TESTING GROUNDS
 
+console.table(employees.employees[0].choices);
+
+////////////////////////////////////////////////////////////////
 async function choices() {
   console.log("@choices");
   try {
@@ -20,7 +26,6 @@ async function main() {
   let myChoice = await choices();
   myChoice = myChoice.All;
 
-  console.log("My if line");
   if (myChoice === option.choices[0]) {
     console.log(option.choices[0]);
     viewAllDepartments();
@@ -57,16 +62,16 @@ async function main() {
   }
 }
 
-function viewAllDepartments() {}
-function viewAllRoles() {}
-function viewAllEmployees() {}
-function addDepartment() {}
-function addEmployee() {}
-function updateEmployee() {}
-function removeEmployee() {}
-function updateEmployeeRole() {}
-function updateEmployeeManager() {}
-function addRole() {}
-function removeRole() {}
+function viewAllDepartments(table) {}
+function viewAllRoles(table) {}
+function viewAllEmployees(table) {}
+function addDepartment(table) {}
+function addEmployee(table) {}
+function updateEmployee(table) {}
+function removeEmployee(table) {}
+function updateEmployeeRole(table) {}
+function updateEmployeeManager(table) {}
+function addRole(table) {}
+function removeRole(table) {}
 
 main();

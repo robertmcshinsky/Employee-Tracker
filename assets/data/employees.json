@@ -4,7 +4,7 @@
   "type": "list",
   "name": "All",
   "message": "Here are all the options.",
-  "choices": [],
+  "choices": [{"firstName": "Stan", "lastName": "McShinsky"},{ "firstName":  "Joe", "lastName":"McShinsky"}, {"firstName": "Mike", "lastName":"McShinsky"}, {"firstName": "James", "lastName":"McShinsky"}, {"firstName": "Richard", "lastName":"McShinsky"}, {"firstName": "Robert", "lastName":"McShinsky"}],
   "default": ""
 }]
 }
