@@ -1,22 +1,103 @@
 {
   "options": [
-{
-  "type": "list",
-  "name": "All",
-  "message": "Here are all the options.",
-  "choices": [
-    "View all Departments",
-    "View all Roles",
-    "View all Employees",
-    "Add Department",
-    "Add Employee",
-    "Update Employee",
-    "Remove Employee",
-    "Update Employee Role",
-    "Update Employee Manager",
-    "Add Role",
-    "Remove Role"
+    {
+      "type": "rawlist",
+      "name": "All",
+      "message": "Here are all the options.",
+      "choices": [
+        "View all Departments ",
+        "View all Roles",
+        "View all Employees",
+        "Add Department",
+        "Add Employee",
+        "Update Employee",
+        "Remove Employee",
+        "Update Employee Role",
+        "Update Employee Manager",
+        "Add Role",
+        "Remove Role"
+      ],
+      "default": ""
+  }],
+  "ad": [
+    {
+      "type": "input",
+      "name": "AD",
+      "message": "What is the new department name?",
+      "default": ""
+  }],
+  "ae": [
+    {
+      "type": "input",
+      "name": "AEfn",
+      "message": "What is the new employee's first name?",
+      "default": ""
+    },
+    {
+      "type": "input",
+      "name": "AEln",
+      "message": "What is the new employee's last name?",
+      "default": ""
+    },
+    {
+      "type": "input",
+      "name": "AErn",
+      "message": "What is the new employee's role Number?",
+      "default": ""
+    },
+    {
+      "type": "input",
+      "name": "AEmn",
+      "message": "What is the new employee's manager Number?",
+      "default": ""
+    }
   ],
-  "default": ""
-}]
+  "ue": [
+    {
+      "type": "input",
+      "name": "UE",
+      "message": "What is the employee's ID number?",
+      "default": ""
+    },
+    {
+      "type": "input",
+      "name": "UErn",
+      "message": "What is the employee's new role Number?",
+      "default": ""
+    },
+    {
+      "type": "input",
+      "name": "UEmn",
+      "message": "What is the emplyee's new manager id?",
+      "default": ""
+    }
+  ],
+  "ar": [
+    {
+      "type": "input",
+      "name": "AR",
+      "message": "What is the new Role?",
+      "default": ""
+    },
+    {
+      "type": "input",
+      "name": "ARs",
+      "message": "What is the new Role Salary?",
+      "default": "??"
+    },
+    {
+      "type": "input",
+      "name": "ARd",
+      "message": "What is the department ID?",
+      "default": ""
+    }
+  ],
+  "rr": [
+    {
+      "type": "input",
+      "name": "RR",
+      "message": "Which Role do you wish to remove?",
+      "default": ""
+    }
+  ]
 }

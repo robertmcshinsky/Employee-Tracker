@@ -5,32 +5,10 @@ const cTable = require("console.table");
 const mysql = require("mysql2");
 const PORT = 3000;
 const app = express();
-//const script = require("./assets/js/script.js");
+const script = require("./assets/js/script.js");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-const db = mysql.createConnection({
-  host: "localhost",
-  // Your username
-  user: "root",
-  // Your password
-  password: "HOTdog123456",
-  database: "employees_db",
-});
-
-db.connect(function (err) {
-  if (err) {
-    console.log(err);
-    return;
-  }
-});
-
-//console.log(options);
-db.query("SELECT * FROM role", (err, rows) => {
-  console.log("Yo");
-  console.log(rows);
-});
 
 ////////////////////////////////
 app.get("/", (req, res) => {
